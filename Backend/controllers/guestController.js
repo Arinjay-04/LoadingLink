@@ -1,11 +1,13 @@
 const db = require('../config/db');
+const bycrpt = require('bcryptjs')
 
 exports.createGuest = async (req, res) => {
     try {
         const { firstname, lastname, address, phone, email, password } = req.body;
+        const hashpassword = await bycrpt.hash(password, 10);
         const result = await db.query(
             "INSERT INTO guest (fistname, lastname, address, phone, email, password) VALUES ($1, $2, $3, $4, $5, $6) RETURNING guestid",
-            [firstname, lastname, address, phone, email, password]
+            [firstname, lastname, address, phone, email, hashpassword]
         );
 
         if (result.rowCount === 0) {

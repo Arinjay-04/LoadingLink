@@ -50,9 +50,9 @@ const HotelLogin = () => {
   };
   return (
     <div className="container">
-      <div className="left-panel">
+      <div className="left-panel1">
         <div className="logo">Hotel Management</div>
-        <h1 className="title">Welcome to <span className="highlight">LoadingLink</span></h1>
+        <h1 className="title">Welcome to <span className="highlight1">LoadingLink</span></h1>
         <p className="subtitle">Please log in to manage your bookings and services</p>
         <form className="login-form">
           <label className="form-label">Email ID</label>
@@ -63,17 +63,17 @@ const HotelLogin = () => {
           <input type="password" className="form-input" placeholder="Enter your password" value={password}
             onChange={handlePasswordChange} required />
 
-          <button type="submit"  className="login-button"  onClick={handleSubmit} >Login</button>
+          <button type="submit"  className="login-button1"  onClick={handleSubmit} >Login</button>
         </form>
         <p className="signup-text">
         <span className="highlight">New to the portal?</span> < Link to = "/hotelsignup " className='linkto'>Register your hotel here</Link>
         </p>
       </div>
-      <div className="right-panel">
+      <div className="right-panel1">
         <img
           src="https://www.kayak.co.in/news/wp-content/uploads/sites/76/2023/08/THEME_HOTEL_SIGN_FIVE_STARS_FACADE_BUILDING_GettyImages-1320779330-3.jpg"
           alt="Hotel Illustration"
-          className="image"
+          className="image1"
         />
       </div>
     </div>

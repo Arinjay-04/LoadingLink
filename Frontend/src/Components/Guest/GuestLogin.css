@@ -12,7 +12,7 @@
   }
   
   /* Left panel styling */
-  .left-panel1 {
+  .left-panel {
     width: 40%;
     background-color: #1a1a1a; /* Dark background */
     color: #ffffff; /* White text */
@@ -38,8 +38,8 @@
     margin-bottom: 10px;
   }
   
-  .highlight1 {
-    color: #8e6f96; /* Light pink color for highlight */
+  .highlight {
+    color: #92b4ae; /* Light pink color for highlight */
   }
   
   /* Subtitle styling */
@@ -58,10 +58,11 @@
   .form-label {
     font-size: 16px;
     margin-bottom: 8px;
-    color: white;
+    color:#c5f8ee;
   }
   
   .form-input {
+    background-color:rgb(254, 240, 240);
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -71,8 +72,8 @@
   }
   
   /* Button styling for both Login and Signup */
-  .login-button1, .signup-button1 {
-    background-color:#96789e;
+  .login-button, .signup-button {
+    background-color:#92b4ae;
     color: #1a1a1a;
     font-size: 18px;
     font-weight: bold;
@@ -83,8 +84,8 @@
     width: 90%;
   }
   
-  .login-button1:hover, .signup-button1:hover {
-    background-color: #96789e; /* Slightly darker pink on hover */
+  .login-button:hover, .signup-button:hover {
+    background-color: #92b4ae; /* Slightly darker pink on hover */
   }
   
   /* Signup text styling */
@@ -94,7 +95,7 @@
   }
   
   .signup-text a {
-    color: #f9f7f9;
+    color: #92b4ae;
     text-decoration: none;
   }
   
@@ -103,21 +104,19 @@
   }
   
   /* Right panel styling */
-  .right-panel1 {
+  .right-panel {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #96789e; /* Light pink background */
+    background-color: #92b4ae; /* Light pink background */
   }
   
   /* Image styling */
-  .image1 {
+  .image {
     width: 80%;
     height: auto;
-    border: 10px solid #96789e; /* Pink border */
+    border: 10px solid #92b4ae; /* Pink border */
     border-radius: 10px;
   }
-
-  
   

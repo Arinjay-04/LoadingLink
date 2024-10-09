@@ -3,11 +3,9 @@ const db = require('../config/db');
 exports.createReservation = async (req, res) => {
     try {
         const hotelid  = req.body.hotelId;
-        const userId = req.userId;
+        const userId = req.userId.hotelId;
         const  roomId  = req.body.roomnumber;
-
-        console.log(roomId);
-        console.log(hotelid);
+       
         // Validate inputs
         if (!hotelid || !userId || !roomId) {
             return res.status(400).send("Missing required fields");
@@ -15,7 +13,7 @@ exports.createReservation = async (req, res) => {
 
         // Check if room exists and get the price
         const amountResult = await db.query("SELECT price FROM room WHERE roomnumber = $1 AND hotelid = $2", [roomId, hotelid]);
-
+        console.log(amountResult.rows);
         // Handle the case where no rows are returned
         if (amountResult.rows.length === 0) {
             return res.status(404).send("Room not found");
@@ -32,6 +30,8 @@ exports.createReservation = async (req, res) => {
         if (result.rowCount === 0) {
             return res.status(400).send("Sorry, cannot insert");
         }
+
+        db.query(("update room set status = 'Reserved' where hotelid = $1 and roomnumber = $2"), [hotelid, roomId]);
 
         res.status(200).send("Reservation created successfully!");
     } catch (error) {

@@ -1,0 +1,158 @@
+/* Insert.css */
+body {
+    background-color:black; /* Black background for the entire page */
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', sans-serif;
+    font-weight: bold;
+  }
+  
+  .form-container {
+    /* background-color:  black;  */
+    color: #ffffff; 
+    border: 2px solid #ae92b4;
+    max-width: 700px;
+    margin: 80px auto; 
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .form-title {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #ae92b4; 
+    letter-spacing: 1px; 
+  }
+  
+  .room-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: left;
+    position: relative; 
+  }
+  
+  .form-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    color: #e2cbe8;
+    transition: color 0.3s ease;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ae92b4;
+    /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none; 
+    border-color: #ae92b4; 
+    /* box-shadow: 0 0 8px rgba(255, 64, 129, 0.4);  */
+    transform: scale(1.02); 
+  }
+  
+  .form-input::placeholder {
+    color: #666; 
+  }
+  
+  .submit-button {
+    background-color: #ae92b4; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff1a7a; 
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.5); 
+  }
+  
+  .submit-button:active {
+    transform: translateY(0); 
+  }
+  
+  .form-group select.form-input {
+    appearance: none; 
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M12.14 6.79a.5.5 0 0 1-.7.71L8 4.06 4.56 7.5a.5.5 0 0 1-.7-.7L7.64 2.5a.75.75 0 0 1 1.06 0l3.44 3.43z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px;
+  }
+  
+  .form-group select.form-input:focus {
+    border-color: #ae92b4;
+    /* box-shadow: 0 0 8px rgba(255, 64, 129, 0.4);  */
+  }
+  
+ 
+  .form-group::before {
+    content: attr(data-icon); 
+    font-size: 24px;
+    position: absolute;
+    left: 10px;
+    top: 35px; 
+    color: #ff4081;
+    pointer-events: none;
+  }
+  
+  /* Container Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Insert.css */
+
+/* Styles for the SVG Container */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Adds spacing between SVG and form title */
+  }
+  
+  /* Styles for the SVG Icon */
+  .room-svg-icon {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    fill: #ff4081; /* Set fill color to match theme */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect on SVG */
+  .room-svg-icon:hover {
+    transform: rotate(5deg) scale(1.05); /* Slight rotation and scaling on hover */
+  }
+  
+  /* Other existing styles go here... */
+  
+  

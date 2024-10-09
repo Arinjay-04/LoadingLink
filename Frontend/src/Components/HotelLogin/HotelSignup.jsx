@@ -46,7 +46,7 @@ const HotelSignup = () => {
   };
   return (
     <div className="container1">
-      <div className="left-panel">
+      <div className="left-panel1">
         <div className="logo">Hotel Management</div>
         <h1 className="title">Join the <span className="highlight">Hotel Premium Portal</span></h1>
         <p className="subtitle">Create an account to get started</p>
@@ -84,7 +84,7 @@ const HotelSignup = () => {
             required
           />
 
-          <button type="submit" className="signup-button" onClick={handleSubmit}>Create Account</button>
+          <button type="submit" className="signup-button1" onClick={handleSubmit}>Create Account</button>
         </form>
         
         <p className="signup-text">
@@ -94,11 +94,11 @@ const HotelSignup = () => {
         <span className="highlight"> Already have an account?</span> < Link to = "/hotellogin " className='linkto'>Login here</Link>
         </p>
       </div>
-      <div className="right-panel">
+      <div className="right-panel1">
         <img
           src="https://www.kayak.co.in/news/wp-content/uploads/sites/76/2023/08/THEME_HOTEL_SIGN_FIVE_STARS_FACADE_BUILDING_GettyImages-1320779330-3.jpg"
           alt="Signup Illustration"
-          className="image"
+          className="image1"
         />
       </div>
     </div>

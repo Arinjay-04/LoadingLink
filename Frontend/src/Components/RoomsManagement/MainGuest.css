@@ -1,0 +1,109 @@
+body {
+    width: 100%;   
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container2 {
+    padding: 40px 20px;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 36px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: #92b4ae;
+}
+
+.main-title h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.main-title p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.block-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the grid layout */
+    gap: 40px;
+}
+
+.block {
+    background-color: #1e1e1e; /* Slightly lighter background for cards */
+    border: 2px solid #92b4ae; /* Light pink border */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for larger card size */
+    /* Increased height for each box */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.block:hover {
+    background-color: #3d2029; /* Slightly lighter background for cards */
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #92b4ae; 
+}
+
+.block h3 {
+    margin: 0 0 15px;
+    color: white;
+}
+
+.block p {
+    margin: 8px 0;
+    color: #ddd;
+}
+
+.block h4 {
+    margin-top: 15px;
+    color: #1aeb91;
+    font-size:20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+a:hover h3 {
+    color: #1aeb91;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid layout for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column layout for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .block {
+        padding: 20px;
+    }
+}

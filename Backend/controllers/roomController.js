@@ -4,8 +4,11 @@ exports.insertRoom = async (req, res) => {
     try {
         const { roomnumber, type, price } = req.body;
         const hotelId = req.hotelId.hotelId;
+        console.log(roomnumber + " " + type + " "+ price + " " + hotelId);
         const status = 'Available';
-
+        if(!hotelId){
+            return res.status(404).send("Token not found...");
+        }
         const result = await db.query("INSERT INTO room (roomnumber, type, status, price, hotelid) VALUES ($1, $2, $3, $4, $5)", [roomnumber, type, status, price, hotelId]);
 
         if (result.rowCount === 0) {
@@ -123,8 +126,7 @@ exports.getHotelRooms = async (req, res) => {
 
 
 exports.getGuestRooms = async (req, res) => {
-    const hotelId  = req.hotelId;
-    console.log(hotelId)
+    const hotelId = req.params.hotelId;
     try {
         const result = await db.query("SELECT * FROM room where room.hotelid = $1 and room.status = 'Available'", [hotelId]);
         if (result.rowCount === 0) {
